@@ -1,0 +1,34 @@
+The data for the price is still being fetched, so just wait a few seconds and it will appear.
+......
+
+xmple
+[
+  { "name": "Alumahan", "price": 375.00, "weight": "per 500g" },
+  { "name": "Bangus", "price": 356.50, "weight": "per per kg" },
+  { "name": "Asohos", "price": 425.00, "weight": "per 500g" },
+  { "name": "Bakoko", "price": 745.00, "weight": "per kg" },
+  { "name": "Bitilya", "price": 395.00, "weight": "per 500g" },
+  { "name": "Dalagang Bukid", "price": 345.00, "weight": "per 500g" },
+
+  { "name": "Dapa", "price": 795.00, "weight": "per kg" },
+  { "name": "Espada", "price": 795.00, "weight": "per kg" },
+  { "name": "Galunggong", "price": 245.00, "weight": "per 500g" },
+  { "name": "Gindara", "price": 245.00, "weight": "per kg" },
+  { "name": "Hasa Hasa", "price": 345.00, "weight": "per 500g" },
+
+  { "name": "Lapu-Lapu Black Genuine", "price": 1250.00, "weight": "per kg" },
+  { "name": "Lato Seaweed", "price": 179.00, "weight": "per 500g" },
+  { "name": "Matambaka", "price": 645.00, "weight": "per kg" },
+  { "name": "Maya Maya", "price": 1275.00, "weight": "per kg" },
+  { "name": "Pampano", "price": 725.00, "weight": "per kg" },
+
+  { "name": "Salay Ginto", "price": 285.00, "weight": "per 500g" },
+  { "name": "Samaral", "price": 375.00, "weight": "per 500g" },
+  { "name": "Sapsap", "price": 245.00, "weight": "per 500g" },
+  { "name": "Shrimp Jumbo", "price": 725.00, "weight": "per 500g" },
+  { "name": "Tahong Small", "price": 219.00, "weight": "per kg" },
+
+  { "name": "Tawilis", "price": 165.00, "weight": "per 500g" },
+  { "name": "Tilapia Medium/Large", "price": 245.00, "weight": "per kg" },
+  { "name": "Yellow Fin", "price": 625.00, "weight": "per kg" }
+]

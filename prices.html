@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prices - Seafood Tracker</title>
+  <link href="styles.css" rel="stylesheet">
+  <style>
+  
+  
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">ArchDevs</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="description.html">Description</a></li>
+      <li><a href="prices.html" class="active">Prices</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+
+  <div class="containerPrices">
+    <div class="top-controls">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="..." />
+        <button id="search-btn" style="margin-left: 10px; background: transparent; border: none; color: black; cursor: pointer;">search</button>
+        <button id="clear-btn" style="margin-left: 10px; color: Red; background: transparent; border: none; cursor: pointer;">X</button>
+      </div>
+
+      <div>
+        <span>Location:</span>
+        <span class="badge">NCR</span>
+
+        <span>Sort by:</span>
+        <div class="sort-container">
+          <button id="sort-toggle">A-Z ⬇</button>
+          <div id="sort-panel" class="sort-panel hidden">
+            <span class="badge sort-btn" data-sort="az">A-Z</span>
+            <span class="badge sort-btn" data-sort="za">Z-A</span>
+            <span class="badge sort-btn" data-sort="low">Low Price</span>
+            <span class="badge sort-btn" data-sort="high">High Price</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-grid" id="product-list">
+      
+    </div>
+  </div>
+
+  <script>
+    const productList = document.getElementById('product-list');
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    const clearBtn = document.getElementById('clear-btn');
+    const sortToggle = document.getElementById('sort-toggle');
+    const sortPanel = document.getElementById('sort-panel');
+    const sortButtons = document.querySelectorAll('.sort-btn');
+
+    let products = [];
+    let currentSort = 'az';
+
+  
+    fetch('https://renzdc3.github.io/fishh/data.json')
+      .then(res => res.json())
+      .then(data => {
+        products = data;
+        displayProducts(products);
+      });
+
+      function displayProducts(items) {
+  productList.innerHTML = '';
+  items.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'product-card';
+    div.innerHTML = `
+      <img src="${p.image}" alt="${p.name}" style="width: 100px; border-radius: 10px;">
+      <div class="product-name">${p.name}</div>
+      <div class="product-weight">${p.weight}</div>
+      <div class="product-price">₱${parseFloat(p.price).toFixed(2)}</div>
+    `;
+    productList.appendChild(div);
+  });
+}
+
+
+    function applyFilters() {
+      let filtered = [...products];
+
+      const searchTerm = searchInput.value.toLowerCase();
+      if (searchTerm) {
+        filtered = filtered.filter(p => p.name.toLowerCase().includes(searchTerm));
+      }
+
+      switch (currentSort) {
+        case 'az':
+          filtered.sort((a, b) => a.name.localeCompare(b.name));
+          break;
+        case 'za':
+          filtered.sort((a, b) => b.name.localeCompare(a.name));
+          break;
+        case 'low':
+          filtered.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+          break;
+        case 'high':
+          filtered.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+          break;
+      }
+
+      displayProducts(filtered);
+    }
+
+    searchBtn.addEventListener('click', applyFilters);
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilters();
+    });
+
+    sortToggle.addEventListener('click', () => {
+      sortPanel.classList.toggle('hidden');
+    });
+
+    sortButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentSort = btn.dataset.sort;
+        sortToggle.textContent = `${btn.textContent} `;
+        sortPanel.classList.add('hidden');
+        applyFilters();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!sortToggle.contains(e.target) && !sortPanel.contains(e.target)) {
+        sortPanel.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

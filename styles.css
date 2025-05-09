@@ -1,0 +1,242 @@
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #11272d;
+    color: white;
+  }
+
+  .navbar {
+    background-color: #0a1b1f;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    display: inline;
+  }
+
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+  }
+
+  .navbar ul li a.active,
+  .navbar ul li a:hover {
+    background-color: #1e3c43;
+  }
+
+  .content {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .content h1 {
+    font-size: 38px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+    /* description Box *************************/
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+  }
+
+  .description-box {
+    
+    background-color: #0a1b1f;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.6;
+}
+      /*Prices*************************/
+    
+.sort-container {
+    position: relative;
+    display: inline-block;
+}
+  
+  #sort-toggle {
+    padding: 6px 14px;
+    border: 1px;
+      border-radius: 20px;
+      background-color: #005677;
+      margin-left: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+  }
+  
+  .sort-panel {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 99;
+  }
+  
+  .sort-panel a.badge {
+    display: block;
+    margin: 5px 0;
+    padding: 6px 10px;
+    text-decoration: none;
+    background: #f1f1f1;
+    color: #333;
+    border-radius: 5px;
+    transition: background 0.2s;
+  }
+  
+  .sort-panel a.badge:hover {
+    background: #ddd;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .containerPrices {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 30px auto;
+  padding: 20px;
+  width: 90%;
+  border-radius: 10px;
+  
+  overflow-y: auto; 
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  justify-content: center;
+}
+
+
+    .top-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .search-box {
+      background-color: rgb(169, 178, 216);
+      padding: 10px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      margin-left: 100px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: none;
+      color: black;
+      outline: none;
+      font-size: 16px;
+      width: 200px;
+    }
+
+    .badge {
+      padding: 6px 14px;
+      border-radius: 20px;
+      background-color: #005677;
+      margin-left: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+    }
+
+    .badge:hover {
+      background-color: #008fb3;
+    }
+
+   
+
+    .product-card {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      padding: 30px;
+      width: 160px;
+      text-align: center;
+    }
+
+    .product-name {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .product-price {
+      font-size: 16px;
+    }
+
+    .product-weight {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 30px 0 10px;
+      font-size: 14px;
+    }
+
+    .sort-panel.hidden {
+      display: none;
+    }
+
+    .sort-panel {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  

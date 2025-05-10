@@ -1,34 +1,51 @@
-
-......
-
-xmple
 [
-  { "name": "Alumahan", "price": 375.00, "weight": "per 500g" },
-  { "name": "Bangus", "price": 356.50, "weight": "per per kg" },
-  { "name": "Asohos", "price": 425.00, "weight": "per 500g" },
-  { "name": "Bakoko", "price": 745.00, "weight": "per kg" },
-  { "name": "Bitilya", "price": 395.00, "weight": "per 500g" },
-  { "name": "Dalagang Bukid", "price": 345.00, "weight": "per 500g" },
+  { "name": "Alumahan", "price": 375.00, "weight": "per 500g", "image": "images/alumahan.jpg" },
+  { "name": "Arosep Seaweed", "price": 179.00, "weight": "per 500g", "image": "images/Arosep.jpg" },
+  { "name": "Bangus", "price": 212.250, "weight": "per per kg", "image": "images/bangus.jpg" },
+  { "name": "Asohos", "price": 425.00, "weight": "per 500g", "image": "images/asohos.jpg" },
+  { "name": "Bakoko", "price": 745.00, "weight": "per kg", "image": "images/bakoko.jpg" },
+  { "name": "Bitilya", "price": 395.00, "weight": "per 500g", "image": "images/bitilya.jpg" },
+  { "name": "Dalagang Bukid", "price": 345.00, "weight": "per 500g", "image": "images/dalagang-bukid.jpg" },
 
-  { "name": "Dapa", "price": 795.00, "weight": "per kg" },
-  { "name": "Espada", "price": 795.00, "weight": "per kg" },
-  { "name": "Galunggong", "price": 245.00, "weight": "per 500g" },
-  { "name": "Gindara", "price": 245.00, "weight": "per kg" },
-  { "name": "Hasa Hasa", "price": 345.00, "weight": "per 500g" },
+  { "name": "Dapa", "price": 795.00, "weight": "per kg", "image": "images/dapa.jpg" },
+  { "name": "Espada", "price": 795.00, "weight": "per kg", "image": "images/espada.jpg" },
+  { "name": "Galunggong", "price": 245.00, "weight": "per 500g", "image": "images/galunggong.jpg" },
+  { "name": "Gindara", "price": 245.00, "weight": "per kg", "image": "images/gindara.jpg" },
+  { "name": "Kuhol", "price": 155.00, "weight": "per kg", "image": "images/Kuhol.jpg" },
+  { "name": "Hasa Hasa", "price": 345.00, "weight": "per 500g", "image": "images/hasa-hasa.jpg" },
+  { "name": "Halaan Small/Medium", "price": 349.00, "weight": "per kg", "image": "images/Halaan-SmallMedium.jpg" },
+  { "name": "Halaan Large", "price": 429.00, "weight": "per kg", "image": "images/Halaan-Large.jpg" },
+  
 
-  { "name": "Lapu-Lapu Black Genuine", "price": 1250.00, "weight": "per kg" },
-  { "name": "Lato Seaweed", "price": 179.00, "weight": "per 500g" },
-  { "name": "Matambaka", "price": 645.00, "weight": "per kg" },
-  { "name": "Maya Maya", "price": 1275.00, "weight": "per kg" },
-  { "name": "Pampano", "price": 725.00, "weight": "per kg" },
+  { "name": "Lapu-Lapu Black Genuine", "price": 1250.00, "weight": "per kg", "image": "images/lapu-lapu-black-genuine.jpg" },
+  { "name": "Lato Seaweed", "price": 179.00, "weight": "per 500g", "image": "images/lato-seaweed.jpg" },
+  { "name": "Matambaka", "price": 645.00, "weight": "per kg", "image": "images/matambaka.jpg" },
+  { "name": "Maya Maya", "price": 1275.00, "weight": "per kg", "image": "images/maya-maya.jpg" },
+  { "name": "Oysters, Closed Full Shell", "price": 249.00, "weight": "per kg", "image": "images/OystersClosed.jpg" },
+  { "name": "Oysters, Open Half Shell", "price": 289.00, "weight": "per 500g", "image": "images/OystersOpen.jpg" },
+  { "name": "Pampano", "price": 725.00, "weight": "per kg", "image": "images/pampano.jpg" },
 
-  { "name": "Salay Ginto", "price": 285.00, "weight": "per 500g" },
-  { "name": "Samaral", "price": 375.00, "weight": "per 500g" },
-  { "name": "Sapsap", "price": 245.00, "weight": "per 500g" },
-  { "name": "Shrimp Jumbo", "price": 725.00, "weight": "per 500g" },
-  { "name": "Tahong Small", "price": 219.00, "weight": "per kg" },
+  { "name": "Salay Ginto", "price": 285.00, "weight": "per 500g", "image": "images/salay-ginto.jpg" },
+  { "name": "Samaral", "price": 375.00, "weight": "per 500g", "image": "images/samaral.jpg" },
+  { "name": "Sapsap", "price": 245.00, "weight": "per 500g", "image": "images/sapsap.jpg" },
+  { "name": "Shrimp Jumbo", "price": 725.00, "weight": "per 500g", "image": "images/shrimp-jumbo.jpg" },
+  { "name": "Shrimp Large", "price": 465.00, "weight": "per 500g", "image": "images/shrimp-large.jpg" },
+  { "name": "Shrimp Small", "price": 725.00, "weight": "per 500g", "image": "images/shrimp-small.jpg" },
+  { "name": "Squid Baby", "price": 725.00, "weight": "per kg", "image": "images/SquidBaby.jpg" },
+  { "name": "Squid Large", "price": 725.00, "weight": "per kg", "image": "images/SquidLarge.jpg" },
+  { "name": "Squid Medium", "price": 725.00, "weight": "pper kg", "image": "images/SquidMedium.jpg" },
 
-  { "name": "Tawilis", "price": 165.00, "weight": "per 500g" },
-  { "name": "Tilapia Medium/Large", "price": 245.00, "weight": "per kg" },
-  { "name": "Yellow Fin", "price": 625.00, "weight": "per kg" }
+
+  
+  { "name": "Tahong Small", "price": 425.00, "weight": "per kg", "image": "images/tahong-small.jpg" },
+  { "name": "Tahong Medium", "price": 239.00, "weight": "per kg", "image": "images/tahong-medium.jpg" },
+  { "name": "Tahong Large", "price": 269.00, "weight": "per kg", "image": "images/tahong-large.jpg" },
+
+  { "name": "Tawilis", "price": 165.00, "weight": "per 500g", "image": "images/tawilis.jpg" },
+  { "name": "Tilapia Medium/Large", "price": 245.00, "weight": "per kg", "image": "images/tilapia-medium-large.jpg" },
+  { "name": "Tiger Prawns Jumbo ", "price": 1,895.00, "weight": "per kg", "image": "images/TigerPrawnsJ.jpg" },
+  { "name": "Tiger Prawns XJumbo ", "price": 1,995.00, "weight": "per kg", "image": "images/TigerPrawnsXJ.jpg" },
+  { "name": "Ulang / River Prawns ", "price": 1,745.00, "weight": "per kg", "image": "images/ulang.jpg" },
+
+  { "name": "Yellow Fin", "price": 625.00, "weight": "per kg", "image": "images/yellow-fin.jpg" }
 ]

@@ -23,18 +23,31 @@
     </ul>
   </div>
 
+
+  
+
   <div class="containerPrices">
     <div class="top-controls">
       <div class="search-box">
-        <input type="text" id="search-input" placeholder="..." />
-        <button id="search-btn" style="margin-left: 10px; background: transparent; border: none; color: black; cursor: pointer;">search</button>
+        <input type="text" id="search-input" placeholder="Search" />
+        <button id="search-btn" style="margin-left: 10px; background: transparent; border: none; color: black; cursor: pointer;"></button>
         <button id="clear-btn" style="margin-left: 10px; color: Red; background: transparent; border: none; cursor: pointer;">X</button>
       </div>
+      
+    
 
+      
       <div>
-        <span>Location:</span>
-        <span class="badge">NCR</span>
-
+        <!--<span>Location:</span>
+        <span class="badge">NCR</span>-->
+        <select id="category-select">
+    <option value="all">All Categories</option>
+    <option value="fish">Fish</option>
+    <option value="cephalopod">Cephalopod</option>
+    <option value="shellfish">Shellfish</option>
+    <option value="seaweed">Seaweed</option>
+    </select>
+    
         <span>Sort by:</span>
         <div class="sort-container">
           <button id="sort-toggle">A-Z ⬇</button>

@@ -5,6 +5,8 @@
     const sortToggle = document.getElementById('sort-toggle');
     const sortPanel = document.getElementById('sort-panel');
     const sortButtons = document.querySelectorAll('.sort-btn');
+    const categorySelect = document.getElementById('category-select');
+
 
     let products = [];
     let currentSort = 'az';
@@ -34,32 +36,44 @@
 
 
     function applyFilters() {
-      let filtered = [...products];
+  let filtered = [...products];
 
-      const searchTerm = searchInput.value.toLowerCase();
-      if (searchTerm) {
-        filtered = filtered.filter(p => p.name.toLowerCase().includes(searchTerm));
-      }
+  const searchTerm = searchInput.value.toLowerCase();
+  const selectedCategory = categorySelect.value;
 
-      switch (currentSort) {
-        case 'az':
-          filtered.sort((a, b) => a.name.localeCompare(b.name));
-          break;
-        case 'za':
-          filtered.sort((a, b) => b.name.localeCompare(a.name));
-          break;
-        case 'low':
-          filtered.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-          break;
-        case 'high':
-          filtered.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-          break;
-      }
+  if (searchTerm) {
+    filtered = filtered.filter(p => p.name.toLowerCase().includes(searchTerm));
+  }
 
-      displayProducts(filtered);
-    }
+  if (selectedCategory !== 'all') {
+    filtered = filtered.filter(p => p.category === selectedCategory);
+  }
 
+  switch (currentSort) {
+    case 'az':
+      filtered.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+    case 'za':
+      filtered.sort((a, b) => b.name.localeCompare(a.name));
+      break;
+    case 'low':
+      filtered.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      break;
+    case 'high':
+      filtered.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+      break;
+  }
+
+  displayProducts(filtered);
+}
+
+    categorySelect.addEventListener('change', applyFilters);
     searchBtn.addEventListener('click', applyFilters);
+    searchInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    applyFilters(); // Run the filtering function when Enter is pressed
+  }
+});
     clearBtn.addEventListener('click', () => {
       searchInput.value = '';
       applyFilters();
@@ -83,3 +97,7 @@
         sortPanel.classList.add('hidden');
       }
     });
+
+    
+
+    

@@ -71,7 +71,7 @@
     searchBtn.addEventListener('click', applyFilters);
     searchInput.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
-    applyFilters(); // Run the filtering function when Enter is pressed
+    applyFilters(); 
   }
 });
     clearBtn.addEventListener('click', () => {

@@ -199,26 +199,24 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-/* Sort Container */
+
 .sort-container {
     position: relative;
     display: inline-block;
 }
 
-/* Hidden Sort Panel (default) */
 .sort-panel.hidden {
     display: none;
 }
 
-/* Sort Panel Styling */
 .sort-panel {
     position: absolute;
     top: 40px;
     right: 0;
     display: flex;
-    flex-direction: column; /* Ensures items stack vertically */
+    flex-direction: column; 
     gap: 10px;
-    width: 70px; /* Increased width for better readability */
+    width: 70px;
     background: rgb(0, 0, 0);
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -227,11 +225,11 @@ body {
     z-index: 99;
 }
 
-/* Sort Panel Buttons */
+
 .sort-panel a.badge {
     display: block;
     margin: 5px 0;
-    padding: 8px 12px; /* Better padding for usability */
+    padding: 8px 12px; 
     text-decoration: none;
     background: #f1f1f1;
     color: #333;
@@ -239,13 +237,12 @@ body {
     transition: background 0.3s ease;
 }
 
-/* Hover Effect */
+
 .sort-panel a.badge:hover {
     background: #3c374b;
     color: white;
 }
 
-/* Sort Toggle Button */
 #sort-toggle {
     padding: 6px 14px;
     border: none;

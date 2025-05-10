@@ -1,4 +1,4 @@
-The data for the price is still being fetched, so just wait a few seconds and it will appear.
+
 ......
 
 xmple

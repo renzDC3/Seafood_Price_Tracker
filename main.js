@@ -81,10 +81,10 @@ if (priceChange < 0) {
 }
     
     div.innerHTML = `
-  <img src="${p.image}" alt="${p.name}" style="width: 100px; border-radius: 10px; width:150px;">
-  <div class="product-name" style="margin-bottom:15px;">${p.name}</div>
+  
+ 
 
-  <div class="product-price" style="background-color:black; padding:5px; border-radius:17px; border:1px #242424 solid; margin-bottom:9px;">₱${parseFloat(p.price).toFixed(2)}  <div class="product-weight">${p.weight}</div></div>
+  <div class="product-price" style="background-color:black; padding:5px; border-radius:17px; border:1px #242424 solid; margin-bottom:9px;"> <img src="${p.image}" alt="${p.name}" style="width: 100px; border-radius: 10px; width:150px;"><div class="product-name" style="margin-bottom:15px;">${p.name}</div>₱${parseFloat(p.price).toFixed(2)}  <div class="product-weight">${p.weight}</div></div>
   <div class="product-last-price" style="color: gray; font-size: 0.85em;">Last price: ₱${parseFloat(p.last_price).toFixed(2)}</div>
   ${changeIndicator}
 `;

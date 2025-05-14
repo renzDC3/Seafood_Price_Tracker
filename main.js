@@ -46,7 +46,7 @@ overlay.addEventListener('click', (e) => {
     let currentSort = 'az';
 
   
-    fetch('https://renzdc3.github.io/fishh/data.json')
+    fetch('https://renzdc3.github.io/seafoodAPI/data.json')
       .then(res => res.json())
       .then(data => {
         products = data;

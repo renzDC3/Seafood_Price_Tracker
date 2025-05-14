@@ -10,13 +10,17 @@
   }
 }
 
-
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #11272d;
     color: white;
-  }
+    
+    background-size: cover; /* Ensures the image covers the entire screen */
+   
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
 
   .navbar {
     background-color: #0a1b1f;

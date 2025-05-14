@@ -7,6 +7,40 @@
     const sortButtons = document.querySelectorAll('.sort-btn');
     const categorySelect = document.getElementById('category-select');
 
+const overlay = document.getElementById('info-overlay'); 
+const infoImage = document.getElementById('info-image'); 
+const infoTagalogName = document.getElementById('info-tagalog-name'); 
+const infoEnglishName = document.getElementById('info-english-name'); 
+const infoScientificName = document.getElementById('info-scientific-name'); 
+const infoDescription = document.getElementById('info-description'); 
+const infoClose = document.getElementById('info-close');
+
+function showInfoPanel(product) {
+    infoImage.src = product.image;
+    infoTagalogName.textContent = product.tagalog_name;
+    infoEnglishName.textContent = product.english_name;
+    infoScientificName.textContent = product.scientific_name;
+    infoDescription.textContent = product.description;
+    overlay.classList.remove("hidden");
+}
+
+// Close panel on X click
+infoClose.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+});
+
+
+
+infoClose.addEventListener('click', () => {
+  overlay.classList.add('hidden');
+});
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) {
+    overlay.classList.add('hidden');
+  }
+});
+
 
     let products = [];
     let currentSort = 'az';
@@ -17,6 +51,7 @@
       .then(data => {
         products = data;
         displayProducts(products);
+        
       });
 
       function displayProducts(items) {
@@ -28,11 +63,17 @@
       <img src="${p.image}" alt="${p.name}" style="width: 100px; border-radius: 10px;">
       <div class="product-name">${p.name}</div>
       <div class="product-weight">${p.weight}</div>
-      <div class="product-price">₱${parseFloat(p.price).toFixed(2)}</div>
+      <div class="product-price">Now: ₱${parseFloat(p.price).toFixed(2)}</div>
+      <div class="product-last-price" style="color: gray; font-size: 0.85em;">Last: ₱${parseFloat(p.last_price).toFixed(2)}</div>
     `;
+
+    // Attach the click event to show info panel
+    div.addEventListener('click', () => showInfoPanel(p));
+
     productList.appendChild(div);
   });
 }
+
 
 
     function applyFilters() {

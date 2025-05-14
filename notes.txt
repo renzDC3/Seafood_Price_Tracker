@@ -61,7 +61,7 @@
     "weight": "per kg",
     "category": "fish",
     "image": "images/bakoko.jpg",
-    best_sale": false
+    "best_sale": false
   },
   {
     "name": "Bitilya",
@@ -137,7 +137,7 @@
     "last_price": 240.00,
     "weight": "per kg",
     "category": "fish",
-    "image": "images/gindara.jpg"
+    "image": "images/gindara.jpg",
     "best_sale": false
   },
   {
@@ -490,5 +490,5 @@
     "category": "fish",
     "image": "images/yellow-fin.jpg",
      "best_sale": false
-    "}
+    }
 ]
